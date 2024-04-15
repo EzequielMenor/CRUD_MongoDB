@@ -33,26 +33,27 @@ export default function EditTopicForm({ id, title, description }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md mx-auto">
       <input
         onChange={(e) => setNewTitle(e.target.value)}
         value={newTitle}
-        className="border border-slate-500 px-8 py-2"
+        className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:border-blue-500"
         type="text"
-        placeholder="Titulo del Tema"
+        placeholder="Título del Tema"
       />
 
       <input
         onChange={(e) => setNewDescription(e.target.value)}
         value={newDescription}
-        className="border border-slate-500 px-8 py-2"
+        className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:border-blue-500"
         type="text"
         placeholder="Descripción del tema"
       />
 
-      <button className="bg-green-600 font-bold text-white py-3 px-6 w-fit">
+      <button className="bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300 ease-in-out">
         Actualizar Tema
       </button>
     </form>
+
   )
 }

@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.css */
+
+/* Establecer un fondo que se integre bien con los nuevos estilos de los componentes */
+body {
+  background-color: #efefefca; /* Cambiar a un tono de gris claro o cualquier otro color que se ajuste a tus nuevos estilos */
+}
+
+/* Agregar estilos globales adicionales */
+/* Por ejemplo, puedes definir estilos para el elemento body, como márgenes o fuentes predeterminadas */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
