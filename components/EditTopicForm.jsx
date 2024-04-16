@@ -38,7 +38,7 @@ export default function EditTopicForm({ id, title, description }) {
         <input
           onChange={(e) => setNewTitle(e.target.value)}
           value={newTitle}
-          className="border border-slate-500 px-8 py-2"
+          className="custom-border"
           type="text"
           placeholder="Titulo del Tema"
         />
@@ -46,16 +46,16 @@ export default function EditTopicForm({ id, title, description }) {
         <input
           onChange={(e) => setNewDescription(e.target.value)}
           value={newDescription}
-          className="border border-slate-500 px-8 py-2"
+          className="custom-border"
           type="text"
           placeholder="Descripción del tema"
         />
 
         <div className="flex">
-          <button type="submit" className="bg-green-600 font-bold text-white py-3 px-5 mr-4 w-fit rounded-md">
+          <button type="submit" className="custom-style">
             Actualizar Tema
           </button>
-          <a href="/" className="bg-red-600 font-bold text-white py-3 px-5 w-fit rounded-md">
+          <a href="/" className="custom-style-red">
             Cancelar
           </a>
         </div>
