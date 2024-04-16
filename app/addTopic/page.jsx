@@ -37,13 +37,20 @@ export default function AddTopic() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-      <input onChange={(e) => setTitle(e.target.value)} value={title} className="border border-slate-500 px-8 py-2" type="text" placeholder="Titulo del Tema" />
-      <input onChange={(e) => setDescription(e.target.value)} value={description} className="border border-slate-500 px-8 py-2" type="text" placeholder="Descripción del tema" />
+    <>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <input onChange={(e) => setTitle(e.target.value)} value={title} className="border border-slate-500 px-8 py-2" type="text" placeholder="Titulo del Tema" />
+        <input onChange={(e) => setDescription(e.target.value)} value={description} className="border border-slate-500 px-8 py-2" type="text" placeholder="Descripción del tema" />
 
-      <button type="submit" className="bg-green-600 font-bold text-white py-3 px-6 w-fit">
-        Añadir Tema
-      </button>
-    </form>
+        <div className="flex">
+          <button type="submit" className="bg-green-600 font-bold text-white py-3 px-5 mr-4 w-fit rounded-md">
+            Añadir Tema
+          </button>
+          <a href="/" className="bg-red-600 font-bold text-white py-3 px-5 w-fit rounded-md">
+            Cancelar
+          </a>
+        </div>
+      </form>
+    </>
   )
 }

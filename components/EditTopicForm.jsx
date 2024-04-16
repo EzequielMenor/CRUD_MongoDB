@@ -33,27 +33,34 @@ export default function EditTopicForm({ id, title, description }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md mx-auto">
-      <input
-        onChange={(e) => setNewTitle(e.target.value)}
-        value={newTitle}
-        className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:border-blue-500"
-        type="text"
-        placeholder="Título del Tema"
-      />
+    <>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <input
+          onChange={(e) => setNewTitle(e.target.value)}
+          value={newTitle}
+          className="border border-slate-500 px-8 py-2"
+          type="text"
+          placeholder="Titulo del Tema"
+        />
 
-      <input
-        onChange={(e) => setNewDescription(e.target.value)}
-        value={newDescription}
-        className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:border-blue-500"
-        type="text"
-        placeholder="Descripción del tema"
-      />
+        <input
+          onChange={(e) => setNewDescription(e.target.value)}
+          value={newDescription}
+          className="border border-slate-500 px-8 py-2"
+          type="text"
+          placeholder="Descripción del tema"
+        />
 
-      <button className="bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300 ease-in-out">
-        Actualizar Tema
-      </button>
-    </form>
+        <div className="flex">
+          <button type="submit" className="bg-green-600 font-bold text-white py-3 px-5 mr-4 w-fit rounded-md">
+            Actualizar Tema
+          </button>
+          <a href="/" className="bg-red-600 font-bold text-white py-3 px-5 w-fit rounded-md">
+            Cancelar
+          </a>
+        </div>
+      </form>
+    </>
 
-  )
+  );
 }
