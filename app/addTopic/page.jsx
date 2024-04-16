@@ -27,6 +27,7 @@ export default function AddTopic() {
       });
 
       if (res.ok) {
+        router.refresh();
         router.push('/');
       } else {
         throw new Error("Fallo al crear el tema");

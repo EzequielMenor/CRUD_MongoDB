@@ -25,8 +25,8 @@ export default function EditTopicForm({ id, title, description }) {
         throw new Error("Error al actualizar el tema");
       }
 
-      router.refresh();
       router.push("/")
+      router.refresh();
     } catch (error) {
       console.log(error);
     }
